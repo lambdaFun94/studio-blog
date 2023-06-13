@@ -1,0 +1,63 @@
+{
+  "$id": "3859073401283456134",
+  "$schema": "https://schema.yext.com/config/km/entity/v1",
+  "primaryLocale": "en",
+  "content": {
+    "c_coverPhoto": {
+      "image": {
+        "height": 1381,
+        "sourceUrl": "https://images.unsplash.com/photo-1578059474177-88fb974a2d15?ixlib\u003drb-4.0.3\u0026ixid\u003dM3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\u0026auto\u003dformat\u0026fit\u003dcrop\u0026w\u003d2071\u0026q\u003d80",
+        "thumbnails": [
+          {
+            "height": 1381,
+            "url": "https://a.mktgcdn.com/p-sandbox/QEuQG2q6h9NzM_ygSgO_MC7Fu1ImGeVDrJqqRM3MFdQ/2071x1381.jpg",
+            "width": 2071
+          },
+          {
+            "height": 1267,
+            "url": "https://a.mktgcdn.com/p-sandbox/QEuQG2q6h9NzM_ygSgO_MC7Fu1ImGeVDrJqqRM3MFdQ/1900x1267.jpg",
+            "width": 1900
+          },
+          {
+            "height": 413,
+            "url": "https://a.mktgcdn.com/p-sandbox/QEuQG2q6h9NzM_ygSgO_MC7Fu1ImGeVDrJqqRM3MFdQ/619x413.jpg",
+            "width": 619
+          },
+          {
+            "height": 400,
+            "url": "https://a.mktgcdn.com/p-sandbox/QEuQG2q6h9NzM_ygSgO_MC7Fu1ImGeVDrJqqRM3MFdQ/600x400.jpg",
+            "width": 600
+          },
+          {
+            "height": 131,
+            "url": "https://a.mktgcdn.com/p-sandbox/QEuQG2q6h9NzM_ygSgO_MC7Fu1ImGeVDrJqqRM3MFdQ/196x131.jpg",
+            "width": 196
+          }
+        ],
+        "url": "https://a.mktgcdn.com/p-sandbox/QEuQG2q6h9NzM_ygSgO_MC7Fu1ImGeVDrJqqRM3MFdQ/2071x1381.jpg",
+        "width": 2071
+      }
+    },
+    "c_description": "\"Discover urban chic in Williamsburg\"",
+    "c_keywords": "urban chic, Williamsburg, discovery",
+    "c_landmarks": [
+      "Williamsburg Bridge",
+      "Domino Park",
+      "street art"
+    ],
+    "c_metaDescription": "\"Discover the urban-chic vibe of Williamsburg through our travel blog. Follow us as we embark on an odyssey and uncover the hidden gems of this vibrant neighborhood. Get inspired to plan your own adventure with Williamsburg: An Odyssey of Urban Chic!\"",
+    "c_neighborhoodDescription": "Though it’s become more refined in recent years, Williamsburg still has a hipster vibe—as evidenced by indie music performances, gallery shows and shops run by local artisans. Distilleries and wineries show off the neighborhood’s flair for locally made spirits, while Smorgasburg packs in creative food vendors along the riverfront on summer Saturdays. Williamsburg is one of the City’s most exciting nightlife neighborhoods too, with many of NYC’s trendiest restaurants and clubs.",
+    "c_neighborhoodName": "Williamsburg",
+    "c_restaurants": [
+      "L’Industrie Pizzeria",
+      "The West Coffeehouse \u0026 Bar",
+      "Belly"
+    ],
+    "datePosted": "2023-05-24",
+    "name": "Williamsburg: An Odyssey of Urban Chic",
+    "slug": "williamsburg"
+  },
+  "entityType": "ce_blog",
+  "folder": "yext/root",
+  "labels": []
+}

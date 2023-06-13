@@ -1,0 +1,60 @@
+{
+  "$id": "2904357900551428226",
+  "$schema": "https://schema.yext.com/config/km/entity/v1",
+  "primaryLocale": "en",
+  "content": {
+    "c_body": {
+      "markdown": "## Chelsea: Exploring a Historic and Cultural New York Neighborhood\r\n\r\nWhen you\u0027re in New York City, there are certain neighborhoods that just require a visit. One of those places is Chelsea, located on the west side of Manhattan. With a rich history dating back to the eighteenth century, Chelsea offers plenty of sights and experiences that will make your trip to the Big Apple truly unforgettable.\r\n\r\n### History of Chelsea\r\n\r\nChelsea takes its name from the Royal Hospital Chelsea in London, England. The estate was owned by retired British Major Thomas Clarke in 1750 who later passed it on to his daughter Charity and her husband Benjamin Moore. Later on, their son Clement Clarke Moore inherited the property which was later extended up to 19th Street that gave birth to modern day Chelsea neighborhood.\r\n\r\nChelsea\u0027s past is also beautifully preserved through landmarks such as [The High Line](https://www.thehighline.org/), an old elevated railway track converted into a beautiful park with stunning views over Manhattan\u0027s skyline; you can take a walk along this green space built above street level and enjoy some peace amidst what can often be an overwhelming city.\r\n\r\n### Notable Attractions in Chelsea \r\nIf you\u0027re looking for something more interactive than just pretty views or historical buildings then head over to [Chelsea Market](https://chelseamarket.com/) for an exceptional culinary adventure or grab some souvenirs at their local shops; there is something here for everyone!\r\n\r\n### Dining and Nightlife Scene \r\nWhen it comes time for dinner after all that sightseeing, night - life activity never decreases at ‘Downtown West\u0027 aka \u0027Meatpacking’ which makes it one of NYC’s most dynamic places after dark; wine bars abound offering unique cocktails too! In this trendy area sit top spots such as [Cookshop](https://cookshopny.com/), where every dish is made using fresh, locally sourced ingredients giving visitors an exciting taste sensation you won’t find anywhere. Sitting across the street from Cookshop you will find Contemporary Roman Cuisine at [Ovest Pizzoteca](https://www.ovestnyc.com/) with its modern yet cozy ambiance. And if you are in the mood for some seafood, visit [Hav \u0026 Mar](https://www.havandmare.com/), specializing in fresh oysters, smoked salmon and lobster rolls.\r\n\r\n### Living in Chelsea Today\r\nThe Chelsea neighborhood\u0027s distinctive architecture and unique charm attract many visitors annually still behind all the glamour is a warm community that you can experience through local markets, quaint coffee shops and shopping destinations that have been run by families for generations. Plus with easy access to public transit — including subway lines A/C/E and 1/2/3 as well as several bus routes — getting around town has never been so convenient.\r\n\r\nIn conclusion, it is no wonder why Chelsea has become one of New York City’s most beloved neighborhoods to date - filled with rich history, community pride ingrained within its residents, culinary delights to die for that cater from foodie\u0027s dream come true to trendsetters searching for variety; indeed there’s nowhere quite like it. If you appreciate beautiful views mixed with historic buildings then we recommend adding this vibrant area full of life into your travel itinerary!"
+    },
+    "c_coverPhoto": {
+      "image": {
+        "height": 1481,
+        "sourceUrl": "https://images.unsplash.com/photo-1548019581-99d71784d09a?ixlib\u003drb-4.0.3\u0026ixid\u003dM3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\u0026auto\u003dformat\u0026fit\u003dcrop\u0026w\u003d987\u0026q\u003d80",
+        "thumbnails": [
+          {
+            "height": 1481,
+            "url": "https://a.mktgcdn.com/p-sandbox/axidqOu5Fs65SndPmDmDxdUs0cWQzSYQHOWrnzKq6wY/987x1481.jpg",
+            "width": 987
+          },
+          {
+            "height": 929,
+            "url": "https://a.mktgcdn.com/p-sandbox/axidqOu5Fs65SndPmDmDxdUs0cWQzSYQHOWrnzKq6wY/619x929.jpg",
+            "width": 619
+          },
+          {
+            "height": 450,
+            "url": "https://a.mktgcdn.com/p-sandbox/axidqOu5Fs65SndPmDmDxdUs0cWQzSYQHOWrnzKq6wY/300x450.jpg",
+            "width": 300
+          },
+          {
+            "height": 294,
+            "url": "https://a.mktgcdn.com/p-sandbox/axidqOu5Fs65SndPmDmDxdUs0cWQzSYQHOWrnzKq6wY/196x294.jpg",
+            "width": 196
+          }
+        ],
+        "url": "https://a.mktgcdn.com/p-sandbox/axidqOu5Fs65SndPmDmDxdUs0cWQzSYQHOWrnzKq6wY/987x1481.jpg",
+        "width": 987
+      }
+    },
+    "c_description": "Explore Chelsea\u0027s vibrant culture with A Bite of the Big Apple.",
+    "c_keywords": "Chelsea, NYC, Big Apple, Foodie Destination, Culture Hub, Landmarks.",
+    "c_landmarks": [
+      "The High Line",
+      "Chelsea Market"
+    ],
+    "c_metaDescription": "Looking for an exciting travel adventure? Check out \"A Bite of the Big Apple: Chelsea Edition\" travel blog, and discover the best places to visit in Chelsea. From trendy cafes to art galleries and boutiques, this guide is perfect for any traveler looking for an immersive experience in one of New York\u0027s most vibrant neighborhoods. Let us take you on a journey through Chelsea with insider tips, recommendations, and stunning photography!",
+    "c_neighborhoodDescription": "Chelsea takes its name from the estate and Georgian-style house of retired British Major Thomas Clarke, who obtained the property when he bought the farm of Jacob Somerindyck on August 16, 1750. The land was bounded by what would become 21st and 24th Streets, from the Hudson River to Eighth Avenue. Clarke chose the name \"Chelsea\" after the Royal Hospital Chelsea in London, England. Clarke passed the estate on to his daughter, Charity, who, with her husband Benjamin Moore, added land on the south of the estate, extending it to 19th Street. The house was the birthplace of their son, Clement Clarke Moore, who in turn inherited the property. Moore is generally credited with writing \"A Visit From St. Nicholas\" and was the author of the first Greek and Hebrew lexicons printed in the United States.",
+    "c_neighborhoodName": "Chelsea",
+    "c_restaurants": [
+      "Cookshop",
+      "Hav \u0026 Mar",
+      "Ovest Pizzoteca"
+    ],
+    "datePosted": "2023-06-01",
+    "name": "A Bite of the Big Apple: Chelsea Edition",
+    "slug": "chelsea"
+  },
+  "entityType": "ce_blog",
+  "folder": "yext/root",
+  "labels": []
+}
