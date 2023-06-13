@@ -11,7 +11,7 @@ import {
 import Container from "../components/Container";
 import BlogLayout from "../components/BlogLayout";
 import Main from "../components/layouts/Main";
-import { formatDate } from "../util/formatDate";
+import { formatDate } from "../utils/formatDate";
 
 export const config: TemplateConfig = {
   stream: {
