@@ -5,10 +5,13 @@ import {
   TemplateProps,
   TemplateConfig,
   TemplateRenderProps,
+  GetHeadConfig,
+  HeadConfig,
 } from "@yext/pages";
 import Container from "../components/Container";
 import BlogLayout from "../components/BlogLayout";
 import Main from "../components/layouts/Main";
+import { formatDate } from "../util/formatDate";
 
 export const config: TemplateConfig = {
   stream: {
@@ -21,6 +24,10 @@ export const config: TemplateConfig = {
       "c_coverPhoto",
       "c_body",
       "c_description",
+      "c_metaDescription",
+      "c_keywords",
+      "c_metaDescription",
+      "c_keywords",
     ],
     filter: {
       entityTypes: ["ce_blog"],
@@ -36,6 +43,32 @@ export const getPath: GetPath<TemplateProps> = ({ document }) => {
   return document.slug;
 };
 
+export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
+  document,
+}): HeadConfig => {
+  return {
+    title: document.name,
+    charset: "UTF-8",
+    viewport: "width=device-width, initial-scale=1",
+    tags: [
+      {
+        type: "meta",
+        attributes: {
+          name: "description",
+          content: document.c_metaDescription,
+        },
+      },
+      {
+        type: "meta",
+        attributes: {
+          name: "keywords",
+          content: document.c_keywords,
+        },
+      },
+    ],
+  };
+};
+
 const Blog = ({ document }: TemplateRenderProps) => {
   const { name, datePosted, c_body, c_coverPhoto } = document;
 
@@ -44,7 +77,7 @@ const Blog = ({ document }: TemplateRenderProps) => {
       <Container>
         <BlogLayout
           title={name}
-          date={datePosted}
+          date={formatDate(datePosted)}
           content={c_body}
           image={c_coverPhoto}
         />

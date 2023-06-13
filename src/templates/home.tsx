@@ -11,6 +11,7 @@ import {
 import { Image } from "@yext/pages/components";
 import Main from "../components/layouts/Main";
 import Container from "../components/Container";
+import { formatDate } from "../util/formatDate";
 
 export const config: TemplateConfig = {
   stream: {
@@ -67,11 +68,11 @@ const Home = ({ document }: TemplateRenderProps) => {
             <div className="relative">
               <div
                 aria-hidden="true"
-                className="absolute hidden h-full w-1/2 bg-gradient-to-t from-gray-700 via-gray-900 to-black lg:block"
+                className="absolute hidden h-full w-1/2 lg:block"
               />
               <div className="relative bg-gray-100 lg:bg-transparent">
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:grid lg:grid-cols-2 lg:px-8">
-                  <div className="mx-auto max-w-2xl py-24 lg:max-w-none lg:py-64">
+                <div className="mx-auto max-w-7xl bg-gradient-to-t from-gray-700 via-gray-900 to-black px-4  sm:px-6 lg:grid lg:grid-cols-2 lg:px-8">
+                  <div className="mx-auto max-w-2xl py-24  lg:max-w-none lg:py-64">
                     <div className="lg:pr-16">
                       <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl xl:text-6xl">
                         {c_heading}
@@ -115,7 +116,9 @@ const Home = ({ document }: TemplateRenderProps) => {
                     )}
                     <div>
                       <div className="flex items-center gap-x-4 text-xs">
-                        <span className="text-gray-500">{blog.datePosted}</span>
+                        <span className="text-gray-500">
+                          {formatDate(blog.datePosted)}
+                        </span>
                       </div>
                       <div className="group relative max-w-xl">
                         <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
