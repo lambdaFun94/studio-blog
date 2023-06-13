@@ -26,8 +26,6 @@ export const config: TemplateConfig = {
       "c_description",
       "c_metaDescription",
       "c_keywords",
-      "c_metaDescription",
-      "c_keywords",
     ],
     filter: {
       entityTypes: ["ce_blog"],
