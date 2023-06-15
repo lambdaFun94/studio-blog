@@ -12,6 +12,7 @@ import { Image } from "@yext/pages/components";
 import Main from "../components/layouts/Main";
 import Container from "../components/Container";
 import { formatDate } from "../utils/formatDate";
+import { Home } from "../types/autogen";
 
 export const config: TemplateConfig = {
   stream: {
@@ -55,7 +56,8 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = (
 };
 
 const Home = ({ document }: TemplateRenderProps) => {
-  const { c_coverPhoto, c_heading, c_subHeading, c_featuredBlogs } = document;
+  const { c_coverPhoto, c_heading, c_subHeading, c_featuredBlogs } =
+    document as Home;
 
   return (
     <Main>

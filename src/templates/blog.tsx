@@ -12,6 +12,7 @@ import Container from "../components/Container";
 import BlogLayout from "../components/BlogLayout";
 import Main from "../components/layouts/Main";
 import { formatDate } from "../utils/formatDate";
+import { Blog as BlogType } from "../types/autogen";
 
 export const config: TemplateConfig = {
   stream: {
@@ -68,7 +69,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
 };
 
 const Blog = ({ document }: TemplateRenderProps) => {
-  const { name, datePosted, c_body, c_coverPhoto } = document;
+  const { name, datePosted, c_body, c_coverPhoto } = document as BlogType;
 
   return (
     <Main>
