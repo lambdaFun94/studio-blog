@@ -13,8 +13,8 @@ https://hopefully-thirsty-rattler.pgsdemo.com/
 1. [Create a Yext Hitchhikers Playground Account](https://hitchhikers.yext.com/create-playground-account).
 2. You will need to add a few early access features to you account. Click on the account icon on the bottom left of the platform and then click on Account Settings. Here you will need to turn on 2 Early Access Features:
 
-   - \***\*Preview Feature: Markdown and Lexical Rich-Text Field Types\*\***
-   - \***\*Preview Feature: Computed Field Values\*\***
+   - **Preview Feature: Markdown and Lexical Rich-Text Field Types**
+   - **Preview Feature: Computed Field Values**
 
    You can follow along with this [video](https://www.loom.com/share/a72ae1b8c52c4fe391482ceac8bde49b?sid=b55caaf6-d556-4ae1-8ae5-616b4b92d3ea).
 
