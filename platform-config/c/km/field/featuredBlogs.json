@@ -1,6 +1,7 @@
 {
   "$id": "c_featuredBlogs",
   "$schema": "https://schema.yext.com/config/km/field/v1",
+  "description": "",
   "displayName": "Featured Blogs",
   "group": "NONE",
   "localization": "PRIMARY_ONLY",

@@ -1,6 +1,7 @@
 {
   "$id": "c_neighborhoodDescription",
   "$schema": "https://schema.yext.com/config/km/field/v1",
+  "description": "",
   "displayName": "Neighborhood Description",
   "group": "NONE",
   "localization": "PRIMARY_ONLY",

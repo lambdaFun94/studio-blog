@@ -1,6 +1,7 @@
 {
   "$id": "c_landmarks",
   "$schema": "https://schema.yext.com/config/km/field/v1",
+  "description": "",
   "displayName": "Landmarks",
   "group": "NONE",
   "localization": "PRIMARY_ONLY",

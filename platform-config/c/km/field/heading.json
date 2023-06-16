@@ -1,6 +1,7 @@
 {
   "$id": "c_heading",
   "$schema": "https://schema.yext.com/config/km/field/v1",
+  "description": "",
   "displayName": "Heading",
   "group": "NONE",
   "localization": "PRIMARY_ONLY",

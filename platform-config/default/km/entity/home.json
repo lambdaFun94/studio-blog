@@ -6,39 +6,40 @@
     "c_coverPhoto": {
       "image": {
         "height": 1441,
-        "sourceUrl": "https://images.unsplash.com/photo-1591825495543-981fa4410313?ixlib\u003drb-4.0.3\u0026ixid\u003dM3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\u0026auto\u003dformat\u0026fit\u003dcrop\u0026w\u003d2008\u0026q\u003d80",
+        "sourceUrl": "https://a.mktgcdn.com/p-sandbox/J5qB-bn1fUoARkUX0W2N3-GUmiCmgAmgpLpfz2rPSHE/2008x1441.jpg",
         "thumbnails": [
           {
             "height": 1441,
-            "url": "https://a.mktgcdn.com/p-sandbox/J5qB-bn1fUoARkUX0W2N3-GUmiCmgAmgpLpfz2rPSHE/2008x1441.jpg",
+            "url": "http://a.mktgcdn.com/p/J5qB-bn1fUoARkUX0W2N3-GUmiCmgAmgpLpfz2rPSHE/2008x1441.jpg",
             "width": 2008
           },
           {
             "height": 1363,
-            "url": "https://a.mktgcdn.com/p-sandbox/J5qB-bn1fUoARkUX0W2N3-GUmiCmgAmgpLpfz2rPSHE/1900x1363.jpg",
+            "url": "http://a.mktgcdn.com/p/J5qB-bn1fUoARkUX0W2N3-GUmiCmgAmgpLpfz2rPSHE/1900x1363.jpg",
             "width": 1900
           },
           {
             "height": 444,
-            "url": "https://a.mktgcdn.com/p-sandbox/J5qB-bn1fUoARkUX0W2N3-GUmiCmgAmgpLpfz2rPSHE/619x444.jpg",
+            "url": "http://a.mktgcdn.com/p/J5qB-bn1fUoARkUX0W2N3-GUmiCmgAmgpLpfz2rPSHE/619x444.jpg",
             "width": 619
           },
           {
             "height": 431,
-            "url": "https://a.mktgcdn.com/p-sandbox/J5qB-bn1fUoARkUX0W2N3-GUmiCmgAmgpLpfz2rPSHE/600x431.jpg",
+            "url": "http://a.mktgcdn.com/p/J5qB-bn1fUoARkUX0W2N3-GUmiCmgAmgpLpfz2rPSHE/600x431.jpg",
             "width": 600
           },
           {
             "height": 141,
-            "url": "https://a.mktgcdn.com/p-sandbox/J5qB-bn1fUoARkUX0W2N3-GUmiCmgAmgpLpfz2rPSHE/196x141.jpg",
+            "url": "http://a.mktgcdn.com/p/J5qB-bn1fUoARkUX0W2N3-GUmiCmgAmgpLpfz2rPSHE/196x141.jpg",
             "width": 196
           }
         ],
-        "url": "https://a.mktgcdn.com/p-sandbox/J5qB-bn1fUoARkUX0W2N3-GUmiCmgAmgpLpfz2rPSHE/2008x1441.jpg",
+        "url": "http://a.mktgcdn.com/p/J5qB-bn1fUoARkUX0W2N3-GUmiCmgAmgpLpfz2rPSHE/2008x1441.jpg",
         "width": 2008
       }
     },
     "c_featuredBlogs": [
+      "5420670929450916491",
       "6709790281064095150",
       "2904357900551428226",
       "3859073401283456134"
@@ -49,6 +50,5 @@
     "slug": "index.html"
   },
   "entityType": "ce_homePage",
-  "folder": "yext/root",
   "labels": []
 }

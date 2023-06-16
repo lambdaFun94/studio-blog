@@ -47,11 +47,6 @@
       "disabled": true
     },
     {
-      "entityType": "ce_blog",
-      "defaultFieldEligibilityGroup": "ce_blog.default",
-      "disabled": false
-    },
-    {
       "entityType": "helpArticle",
       "disabled": true
     },
@@ -66,6 +61,11 @@
     {
       "entityType": "ce_homePage",
       "defaultFieldEligibilityGroup": "ce_homePage.default",
+      "disabled": false
+    },
+    {
+      "entityType": "ce_blog",
+      "defaultFieldEligibilityGroup": "ce_blog.default",
       "disabled": false
     }
   ]

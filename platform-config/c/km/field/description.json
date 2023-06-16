@@ -1,6 +1,7 @@
 {
   "$id": "c_description",
   "$schema": "https://schema.yext.com/config/km/field/v1",
+  "description": "",
   "displayName": "Description",
   "group": "NONE",
   "localization": "PRIMARY_ONLY",

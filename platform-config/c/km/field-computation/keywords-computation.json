@@ -3,6 +3,7 @@
   "$schema": "https://schema.yext.com/config/km/field-computation/v1",
   "field": "c_keywords",
   "computationMethod": "genericDescription",
+  "systemControlled": false,
   "inputs": {
     "additionalInstructions": "The description should only consist of a list of six (6) keywords or keyword phrases, separated by commas. ",
     "maxLength": "10 words.",

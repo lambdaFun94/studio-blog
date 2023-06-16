@@ -1,6 +1,7 @@
 {
   "$id": "c_subHeading",
   "$schema": "https://schema.yext.com/config/km/field/v1",
+  "description": "",
   "displayName": "Sub Heading",
   "group": "NONE",
   "localization": "PRIMARY_ONLY",
