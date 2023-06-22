@@ -22,7 +22,8 @@ export const config: TemplateConfig = {
       "slug",
       "datePosted",
       "c_coverPhoto",
-      "c_body",
+      "c_blogBody",
+      "c_blogAuthor",
       "c_description",
       "c_metaDescription",
       "c_keywords",
@@ -68,7 +69,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
 };
 
 const Blog = ({ document }: TemplateRenderProps) => {
-  const { name, datePosted, c_body, c_coverPhoto } = document;
+  const { name, datePosted, c_blogBody, c_coverPhoto, c_blogAuthor } = document;
 
   return (
     <Main>
@@ -76,8 +77,9 @@ const Blog = ({ document }: TemplateRenderProps) => {
         <BlogLayout
           title={name}
           date={formatDate(datePosted)}
-          content={c_body}
+          content={c_blogBody}
           image={c_coverPhoto}
+          author={c_blogAuthor}
         />
       </Container>
     </Main>
