@@ -61,10 +61,11 @@ const Home = ({ __meta, relativePrefixToRoot, document }: TemplateRenderProps) =
     <MainLayout templateData={{__meta, document}} root={relativePrefixToRoot}>
       <div className="p-2 md:p-8 max-w-7xl mx-auto">
         {c_coverPhoto && (
-          <div className="w-full aspect-square md:aspect-[16/9]">
+          <div className="relative w-full aspect-square md:aspect-[16/9]">
             <Image
               image={c_coverPhoto}
-              className="h-full object-cover object-center rounded-xl"
+              className="absolute inset-0 rounded-xl"
+              style={{height:"100%"}}
             />
           </div>
         )}
@@ -79,7 +80,7 @@ const Home = ({ __meta, relativePrefixToRoot, document }: TemplateRenderProps) =
                 className="relative isolate flex flex-col gap-2 lg:flex-row"
               >
                 {blog && (
-                  <div className="relative aspect-[16/9] md:aspect-square lg:w-64 lg:shrink-0">
+                  <div className="relative aspect-[16/9] lg:aspect-square w-full lg:w-64 lg:shrink-0">
                     <Image
                       image={blog.c_coverPhoto}
                       className="absolute inset-0 rounded-xl bg-gray-50 object-cover"

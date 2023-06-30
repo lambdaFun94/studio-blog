@@ -14,8 +14,8 @@ interface BlogLayoutProps {
 const BlogLayout = ({ title, date, image, content, author }: BlogLayoutProps) => {
   return (
     <div className="mx-auto md:max-w-4xl flex flex-col items-center py-8">
-      <div className="h-blog-photo-small md:h-blog-photo-large w-full mb-1">
-        {image && <Image className="rounded-xl" style={{height:"100%"}} image={image} />}
+      <div className="relative aspect-[16/9] w-full">
+        {image && <Image className="rounded-xl inset-0 absolute" image={image} style={{height:"100%"}} />}
       </div>
       <article className="w-full">
         <header className="flex flex-col mb-4">
@@ -24,7 +24,7 @@ const BlogLayout = ({ title, date, image, content, author }: BlogLayoutProps) =>
             <span className="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500 mx-2" />
             <time>{date}</time>
           </div>
-          <h1 className="mt-8 text-4xl font-bold">
+          <h1 className="mt-6 text-4xl font-bold">
             {title}
           </h1>
         </header>
