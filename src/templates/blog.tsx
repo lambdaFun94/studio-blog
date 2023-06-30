@@ -8,10 +8,10 @@ import {
   GetHeadConfig,
   HeadConfig,
 } from "@yext/pages";
-import Container from "../components/Container";
 import BlogLayout from "../components/BlogLayout";
 import Main from "../components/layouts/Main";
 import { formatDate } from "../utils/formatDate";
+import { Link } from "@yext/pages/components";
 
 export const config: TemplateConfig = {
   stream: {
@@ -73,15 +73,18 @@ const Blog = ({ document }: TemplateRenderProps) => {
 
   return (
     <Main>
-      <Container>
-        <BlogLayout
-          title={name}
-          date={formatDate(datePosted)}
-          content={c_blogBody}
-          image={c_coverPhoto}
-          author={c_blogAuthor}
-        />
-      </Container>
+      <Link href="/">
+        <h1 className="font-bold text-3xl underline">
+          NYC Blog
+        </h1>
+      </Link>
+      <BlogLayout
+        title={name}
+        date={formatDate(datePosted)}
+        content={c_blogBody}
+        image={c_coverPhoto}
+        author={c_blogAuthor}
+      />
     </Main>
   );
 };

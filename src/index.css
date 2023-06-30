@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* div[data-lexical-editor="true"] :is(h1, h2, h3, h4, h5, h6)
+{
+    font-size: revert !important;
+    font-weight: revert !important;
+    margin-bottom: 8px;
+} */

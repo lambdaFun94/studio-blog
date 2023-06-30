@@ -6,7 +6,7 @@ interface MainProps {
 
 const Main = ({ children }: MainProps) => {
   return (
-    <div className="flex h-full antialiased flex-col items-center">
+    <div className="h-full antialiased p-4">
       {children}
     </div>
   );
