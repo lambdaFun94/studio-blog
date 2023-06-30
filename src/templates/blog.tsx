@@ -8,8 +8,8 @@ import {
   GetHeadConfig,
   HeadConfig,
 } from "@yext/pages";
-import BlogLayout from "../components/BlogLayout";
-import Main from "../components/layouts/Main";
+import BlogLayout from "../components/layouts/BlogLayout";
+import MainLayout from "../components/layouts/MainLayout";
 import { formatDate } from "../utils/formatDate";
 import { Link } from "@yext/pages/components";
 
@@ -68,16 +68,11 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
   };
 };
 
-const Blog = ({ document }: TemplateRenderProps) => {
+const Blog = ({ __meta, document, relativePrefixToRoot }: TemplateRenderProps) => {
   const { name, datePosted, c_blogBody, c_coverPhoto, c_blogAuthor } = document;
 
   return (
-    <Main>
-      <Link href="/">
-        <h1 className="font-bold text-3xl underline">
-          NYC Blog
-        </h1>
-      </Link>
+    <MainLayout templateData={{__meta, document}} root={relativePrefixToRoot}>
       <BlogLayout
         title={name}
         date={formatDate(datePosted)}
@@ -85,7 +80,7 @@ const Blog = ({ document }: TemplateRenderProps) => {
         image={c_coverPhoto}
         author={c_blogAuthor}
       />
-    </Main>
+    </MainLayout>
   );
 };
 
