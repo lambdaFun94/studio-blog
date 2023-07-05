@@ -7,11 +7,11 @@ import React from "react";
 
 const Header = ({ url }) => {
   return (
-    <div className="w-full border border-bottom p-4 flex flex-col md:flex-row md:justify-between md:items-center">
-        <Link href={`${url}/index.html`}>
-            <h1 className="font-bold text-3xl underline">NYC Blog</h1>
-        </Link>
-        <p className="text-sm md:text-base">Your guide to The Big Apple.</p>
+    <div className="border-bottom flex w-full flex-col border p-4 md:flex-row md:items-center md:justify-between">
+      <Link href={`${url}/index.html`}>
+        <h1 className="text-3xl font-bold underline">NYC Blog</h1>
+      </Link>
+      <p className="text-sm md:text-base">Your guide to The Big Apple.</p>
     </div>
   );
 };

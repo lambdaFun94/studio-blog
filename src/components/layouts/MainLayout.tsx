@@ -1,5 +1,5 @@
 import React from "react";
-import { AnalyticsProvider } from "@yext/pages/components"; 
+import { AnalyticsProvider } from "@yext/pages/components";
 import Header from "../Header";
 
 // interface MainProps {
@@ -9,11 +9,9 @@ import Header from "../Header";
 const MainLayout = ({ templateData, root, children }) => {
   return (
     <AnalyticsProvider templateData={templateData}>
-      <div className="h-full w-full min-h-screen antialiased">
+      <div className="h-full min-h-screen w-full antialiased">
         <Header url={root} />
-        <div className="p-4">
-          {children}
-        </div>
+        <div className="p-4">{children}</div>
       </div>
     </AnalyticsProvider>
   );

@@ -8,7 +8,7 @@ import {
   HeadConfig,
   TemplateConfig,
 } from "@yext/pages";
-import { Image, Link } from "@yext/pages/components";
+import { Image } from "@yext/pages/components";
 import MainLayout from "../components/layouts/MainLayout";
 import { formatDate } from "../utils/formatDate";
 
@@ -53,24 +53,28 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = (
   };
 };
 
-const Home = ({ __meta, relativePrefixToRoot, document }: TemplateRenderProps) => {
+const Home = ({
+  __meta,
+  relativePrefixToRoot,
+  document,
+}: TemplateRenderProps) => {
   const { c_coverPhoto, c_featuredBlogs } = document;
   console.log(relativePrefixToRoot);
 
   return (
-    <MainLayout templateData={{__meta, document}} root={relativePrefixToRoot}>
-      <div className="p-2 md:p-8 max-w-7xl mx-auto">
+    <MainLayout templateData={{ __meta, document }} root={relativePrefixToRoot}>
+      <div className="mx-auto max-w-7xl p-2 md:p-8">
         {c_coverPhoto && (
-          <div className="relative w-full aspect-square md:aspect-[16/9]">
+          <div className="relative aspect-square w-full md:aspect-[16/9]">
             <Image
               image={c_coverPhoto}
               className="absolute inset-0 rounded-xl"
-              style={{height:"100%"}}
+              style={{ height: "100%" }}
             />
           </div>
         )}
         <div className="mt-14">
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-8">
+          <h2 className="mb-8 text-3xl font-bold text-gray-900 sm:text-4xl">
             Featured Articles
           </h2>
           <div className="flex flex-col justify-center gap-10">
@@ -80,11 +84,11 @@ const Home = ({ __meta, relativePrefixToRoot, document }: TemplateRenderProps) =
                 className="relative isolate flex flex-col gap-2 lg:flex-row"
               >
                 {blog && (
-                  <div className="relative aspect-[16/9] lg:aspect-square w-full lg:w-64 lg:shrink-0">
+                  <div className="relative aspect-[16/9] w-full lg:aspect-square lg:w-64 lg:shrink-0">
                     <Image
                       image={blog.c_coverPhoto}
                       className="absolute inset-0 rounded-xl bg-gray-50 object-cover"
-                      style={{height: "100%"}}
+                      style={{ height: "100%" }}
                     />
                     <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
                   </div>

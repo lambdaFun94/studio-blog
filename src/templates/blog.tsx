@@ -68,11 +68,15 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
   };
 };
 
-const Blog = ({ __meta, document, relativePrefixToRoot }: TemplateRenderProps) => {
+const Blog = ({
+  __meta,
+  document,
+  relativePrefixToRoot,
+}: TemplateRenderProps) => {
   const { name, datePosted, c_blogBody, c_coverPhoto, c_blogAuthor } = document;
 
   return (
-    <MainLayout templateData={{__meta, document}} root={relativePrefixToRoot}>
+    <MainLayout templateData={{ __meta, document }} root={relativePrefixToRoot}>
       <BlogLayout
         title={name}
         date={formatDate(datePosted)}
