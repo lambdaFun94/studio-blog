@@ -1,5 +1,5 @@
 {
-  "name": "pages-starter-react-locations",
+  "name": "blog-react-studio-demo",
   "version": "0.0.0",
   "description": "An example repository to help users get started with React development on Yext Pages",
   "author": "sumo@yext.com",
@@ -19,7 +19,7 @@
     "studio": "npm run features && yext pages generate-test-data -a && studio"
   },
   "engines": {
-    "node": ">=17"
+    "node": "18"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.9",

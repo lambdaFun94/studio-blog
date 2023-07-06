@@ -1,4 +1,3 @@
-import * as React from "react";
 import "../index.css";
 import {
   GetPath,
@@ -8,21 +7,23 @@ import {
   GetHeadConfig,
   HeadConfig,
 } from "@yext/pages";
-import BlogLayout from "../components/BlogLayout";
 import MainLayout from "../components/MainLayout";
 import { formatDate } from "../utils/formatDate";
-import { Link } from "@yext/pages/components";
+import BigImage from "../components/BigImage";
+import { BlogType } from "../types/autogen";
+import CenteredContainer from "../components/CenteredContainer";
+import Title from "../components/Title";
+import MarkdownProse from "../components/MarkdownProse";
 
 export const config: TemplateConfig = {
   stream: {
     $id: "blog",
     fields: [
-      "id",
       "name",
       "slug",
       "datePosted",
-      "c_coverPhoto",
-      "c_blogBody",
+      "primaryPhoto",
+      "c_body",
       "c_blogAuthor",
       "c_description",
       "c_metaDescription",
@@ -39,53 +40,20 @@ export const config: TemplateConfig = {
 };
 
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
-  return document.slug;
+  return document.slug ?? document.entityId.toString();
 };
 
-export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
-  document,
-}): HeadConfig => {
-  return {
-    title: document.name,
-    charset: "UTF-8",
-    viewport: "width=device-width, initial-scale=1",
-    tags: [
-      {
-        type: "meta",
-        attributes: {
-          name: "description",
-          content: document.c_metaDescription,
-        },
-      },
-      {
-        type: "meta",
-        attributes: {
-          name: "keywords",
-          content: document.c_keywords,
-        },
-      },
-    ],
-  };
-};
-
-const Blog = ({
-  __meta,
-  document,
-  relativePrefixToRoot,
-}: TemplateRenderProps) => {
-  const { name, datePosted, c_blogBody, c_coverPhoto, c_blogAuthor } = document;
-
+export default function Blog({ document }: TemplateProps) {
   return (
-    <MainLayout templateData={{ __meta, document }} root={relativePrefixToRoot}>
-      <BlogLayout
-        title={name}
-        date={formatDate(datePosted)}
-        content={c_blogBody}
-        image={c_coverPhoto}
-        author={c_blogAuthor}
-      />
+    <MainLayout>
+      <CenteredContainer>
+        <BigImage
+          src={document.primaryPhoto.image.url}
+          alt={document.primaryPhoto.image.alternateText}
+        />
+        <Title value={document.name} textSize="4xl" fontWeight="bold" />
+        <MarkdownProse content={document.c_body.markdown} />
+      </CenteredContainer>
     </MainLayout>
   );
-};
-
-export default Blog;
+}

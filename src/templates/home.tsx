@@ -1,4 +1,3 @@
-import * as React from "react";
 import "../index.css";
 import {
   GetPath,
@@ -53,16 +52,11 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = (
   };
 };
 
-const Home = ({
-  __meta,
-  relativePrefixToRoot,
-  document,
-}: TemplateRenderProps) => {
+export default function Home({ document }: TemplateProps) {
   const { c_coverPhoto, c_featuredBlogs } = document;
-  console.log(relativePrefixToRoot);
 
   return (
-    <MainLayout templateData={{ __meta, document }} root={relativePrefixToRoot}>
+    <MainLayout templateData={document}>
       <div className="mx-auto max-w-7xl p-2 md:p-8">
         {c_coverPhoto && (
           <div className="relative aspect-square w-full md:aspect-[16/9]">
@@ -118,6 +112,4 @@ const Home = ({
       </div>
     </MainLayout>
   );
-};
-
-export default Home;
+}
