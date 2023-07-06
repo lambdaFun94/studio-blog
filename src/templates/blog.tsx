@@ -8,8 +8,8 @@ import {
   GetHeadConfig,
   HeadConfig,
 } from "@yext/pages";
-import BlogLayout from "../components/layouts/BlogLayout";
-import MainLayout from "../components/layouts/MainLayout";
+import BlogLayout from "../components/BlogLayout";
+import MainLayout from "../components/MainLayout";
 import { formatDate } from "../utils/formatDate";
 import { Link } from "@yext/pages/components";
 

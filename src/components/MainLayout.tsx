@@ -1,6 +1,6 @@
 import React from "react";
 import { AnalyticsProvider } from "@yext/pages/components";
-import Header from "../Header";
+import Header from "./Header";
 
 // interface MainProps {
 //   children?: React.ReactNode;

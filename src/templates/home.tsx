@@ -9,7 +9,7 @@ import {
   TemplateConfig,
 } from "@yext/pages";
 import { Image } from "@yext/pages/components";
-import MainLayout from "../components/layouts/MainLayout";
+import MainLayout from "../components/MainLayout";
 import { formatDate } from "../utils/formatDate";
 
 export const config: TemplateConfig = {
