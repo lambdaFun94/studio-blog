@@ -116,6 +116,7 @@ export default function Home({ document }: TemplateProps) {
                 bottomMargin="0"
                 leftMargin="0"
                 rightMargin="0"
+                alignment="left"
               >
                 <Date
                   date={blog.datePosted}
