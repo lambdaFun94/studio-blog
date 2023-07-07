@@ -27,7 +27,10 @@ const Footer = ({
   textColor,
 }: FooterProps) => {
   return (
-    <footer className="w-full">
+    <footer className="w-full" aria-labelledby="footer-heading">
+      <h2 id="footer-heading" className="sr-only">
+        Footer
+      </h2>
       <ul
         className="flex w-full items-center justify-center gap-10 py-6"
         style={{ backgroundColor, color: textColor }}

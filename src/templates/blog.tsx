@@ -9,12 +9,11 @@ import {
 } from "@yext/pages";
 import MainLayout from "../components/MainLayout";
 import BigImage from "../components/BigImage";
-import { BlogType } from "../types/autogen";
 import ArticleContainer from "../components/ArticleContainer";
 import Title from "../components/Title";
 import MarkdownContent from "../components/MarkdownContent";
 import Header from "../components/Header";
-import HStack from "../components/HStack";
+import HorizontalStack from "../components/HorizontalStack";
 import Snippet from "../components/Snippet";
 import HorizontalDivider from "../components/HorizontalDivider";
 import Footer from "../components/Footer";
@@ -56,14 +55,41 @@ export default function Blog({ document }: TemplateProps) {
         textColor="#FFFFFF"
         company="NYC Blog"
         logo="https://a.mktgcdn.com/p/R9FjcYjRNA5dAespqgHFLMvu2m18-E5Apnb3KON0oJY/300x300.png"
+        link1="#"
+        link2="#"
+        label1="About"
+        label2="Sign In"
       />
       <ArticleContainer>
-        <Title value={document.name} textSize="4xl" fontWeight="bold" />
-        <HStack>
-          <Snippet text={document.c_blogAuthor} textColor="#929191" />
+        <Title
+          value={document.name}
+          textSize="4xl"
+          fontWeight="bold"
+          topMargin="4"
+          bottomMargin="0"
+        />
+        <HorizontalStack
+          spacing="0"
+          leftMargin="0"
+          rightMargin="0"
+          topMargin="2"
+          bottomMargin="0"
+          alignment="center"
+        >
+          <Snippet
+            text={document.c_blogAuthor}
+            textColor="#929191"
+            fontWeight="light"
+            textSize="base"
+          />
           <HorizontalDivider dividerHeight="4" dividerColor="#929191" />
-          <Date textColor="#929191" date={document.datePosted} />
-        </HStack>
+          <Date
+            textColor="#929191"
+            date={document.datePosted}
+            textSize="base"
+            fontWeight="light"
+          />
+        </HorizontalStack>
         <BigImage
           src={document.primaryPhoto.image.url}
           alt={document.primaryPhoto.image.alternateText}

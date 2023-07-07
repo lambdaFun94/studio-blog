@@ -1,6 +1,8 @@
 export interface TitleProps {
   value: string;
   textSize: "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl";
+  topMargin: "0" | "2" | "4" | "6" | "8" | "10";
+  bottomMargin: "0" | "2" | "4" | "6" | "8" | "10";
   fontWeight:
     | "thin"
     | "extralight"
@@ -17,9 +19,17 @@ export const initialProps: TitleProps = {
   value: "Title",
   textSize: "4xl",
   fontWeight: "medium",
+  topMargin: "0",
+  bottomMargin: "4",
 };
 
-const Title = ({ value, textSize, fontWeight }: TitleProps) => {
+const Title = ({
+  value,
+  textSize,
+  fontWeight,
+  topMargin,
+  bottomMargin,
+}: TitleProps) => {
   const weightVariants = {
     thin: "font-thin",
     extralight: "font-extralight",
@@ -41,8 +51,28 @@ const Title = ({ value, textSize, fontWeight }: TitleProps) => {
     "6xl": "text-6xl",
   };
 
+  const topMarginVariants = {
+    "0": "mt-0",
+    "2": "mt-2",
+    "4": "mt-4",
+    "6": "mt-6",
+    "8": "mt-8",
+    "10": "mt-10",
+  };
+
+  const bottomMarginVariants = {
+    "0": "mb-0",
+    "2": "mb-2",
+    "4": "mb-4",
+    "6": "mb-6",
+    "8": "mb-8",
+    "10": "mb-10",
+  };
+
   return (
-    <div className="not-prose mt-4">
+    <div
+      className={`not-prose mt-4 ${topMarginVariants[topMargin]} ${bottomMarginVariants[bottomMargin]}`}
+    >
       <h1
         className={`${sizeVariants[textSize]} ${weightVariants[fontWeight]} tracking-tight text-gray-900`}
       >

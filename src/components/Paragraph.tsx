@@ -1,8 +1,7 @@
 import { HexColor } from "@yext/studio";
 
-export interface SnippetProps {
-  text: string;
-  textColor: HexColor;
+export interface ParagraphProps {
+  value?: string;
   textSize: "xs" | "sm" | "base" | "lg" | "xl" | "2xl";
   fontWeight:
     | "thin"
@@ -14,16 +13,22 @@ export interface SnippetProps {
     | "bold"
     | "extrabold"
     | "black";
+  textColor?: HexColor;
 }
 
-export const initialProps: SnippetProps = {
-  text: "Snippet",
-  textColor: "#000000",
+export const initialProps: ParagraphProps = {
+  value: "Paragraph",
   textSize: "base",
   fontWeight: "normal",
+  textColor: "#000000",
 };
 
-const Snippet = ({ text, textColor, fontWeight, textSize }: SnippetProps) => {
+const Paragraph = ({
+  value,
+  textSize,
+  fontWeight,
+  textColor,
+}: ParagraphProps) => {
   const weightVariants = {
     thin: "font-thin",
     extralight: "font-extralight",
@@ -46,13 +51,14 @@ const Snippet = ({ text, textColor, fontWeight, textSize }: SnippetProps) => {
   };
 
   return (
-    <span
+    <p
+      aria-labelledby="information-heading"
       className={`${sizeVariants[textSize]} ${weightVariants[fontWeight]}`}
       style={{ color: textColor }}
     >
-      {text}
-    </span>
+      {value}
+    </p>
   );
 };
 
-export default Snippet;
+export default Paragraph;

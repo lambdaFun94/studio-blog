@@ -7,9 +7,20 @@ import {
   HeadConfig,
   TemplateConfig,
 } from "@yext/pages";
-import { Image } from "@yext/pages/components";
 import MainLayout from "../components/MainLayout";
-import { formatDate } from "../utils/formatDate";
+import BigImage from "../components/BigImage";
+import CenteredContainer from "../components/CenteredContainer";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import HStack from "../components/HorizontalStack";
+import SquareImage from "../components/SquareImage";
+import Title from "../components/Title";
+import VerticalStack from "../components/VerticalStack";
+import Date from "../components/Date";
+import { C_featuredBlogs } from "../types/autogen";
+import Snippet from "../components/Snippet";
+import Paragraph from "../components/Paragraph";
+import { Link } from "@yext/pages/components";
 
 export const config: TemplateConfig = {
   stream: {
@@ -53,63 +64,94 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = (
 };
 
 export default function Home({ document }: TemplateProps) {
-  const { c_coverPhoto, c_featuredBlogs } = document;
-
   return (
-    <MainLayout templateData={document}>
-      <div className="mx-auto max-w-7xl p-2 md:p-8">
-        {c_coverPhoto && (
-          <div className="relative aspect-square w-full md:aspect-[16/9]">
-            <Image
-              image={c_coverPhoto}
-              className="absolute inset-0 rounded-xl"
-              style={{ height: "100%" }}
-            />
-          </div>
-        )}
-        <div className="mt-14">
-          <h2 className="mb-8 text-3xl font-bold text-gray-900 sm:text-4xl">
-            Featured Articles
-          </h2>
-          <div className="flex flex-col justify-center gap-10">
-            {c_featuredBlogs?.map((blog) => (
-              <article
-                key={blog.id}
-                className="relative isolate flex flex-col gap-2 lg:flex-row"
+    <MainLayout>
+      <Header
+        backgroundColor="#000000"
+        textColor="#FFFFFF"
+        company="NYC Blog"
+        logo="https://a.mktgcdn.com/p/R9FjcYjRNA5dAespqgHFLMvu2m18-E5Apnb3KON0oJY/300x300.png"
+        link1="#"
+        link2="#"
+        label1="About"
+        label2="Sign In"
+      />
+      <CenteredContainer>
+        <VerticalStack
+          spacing="8"
+          topMargin="10"
+          bottomMargin="10"
+          leftMargin="2"
+          rightMargin="2"
+          alignment="left"
+        >
+          <BigImage
+            src={document.c_coverPhoto.image.url}
+            alt={document.c_coverPhoto.image.alternateText}
+          />
+          <Title
+            value="Featured Articles"
+            fontWeight="bold"
+            textSize="4xl"
+            topMargin="0"
+            bottomMargin="0"
+          />
+          {document.c_featuredBlogs?.map((blog: C_featuredBlogs) => (
+            <HStack
+              spacing="4"
+              leftMargin="0"
+              rightMargin="0"
+              topMargin="0"
+              bottomMargin="0"
+              alignment="top"
+            >
+              <SquareImage
+                src={blog.c_coverPhoto?.image.url}
+                alt={blog.c_coverPhoto?.image.alternateText}
+                size="52"
+              />
+              <VerticalStack
+                spacing="1"
+                topMargin="0"
+                bottomMargin="0"
+                leftMargin="0"
+                rightMargin="0"
               >
-                {blog && (
-                  <div className="relative aspect-[16/9] w-full lg:aspect-square lg:w-64 lg:shrink-0">
-                    <Image
-                      image={blog.c_coverPhoto}
-                      className="absolute inset-0 rounded-xl bg-gray-50 object-cover"
-                      style={{ height: "100%" }}
-                    />
-                    <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
-                  </div>
-                )}
-                <div>
-                  <div className="flex items-center gap-x-4 text-xs">
-                    <span className="text-gray-500">
-                      {formatDate(blog.datePosted)}
-                    </span>
-                  </div>
-                  <div className="group relative">
-                    <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-                      <a href={blog.slug}>
-                        <span className="absolute inset-0" />
-                        {blog.name}
-                      </a>
-                    </h3>
-                    <p className="mt-2 text-sm leading-6 text-gray-600">
-                      {blog.c_description}
-                    </p>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </div>
+                <Date
+                  date={blog.datePosted}
+                  textColor="#5b646b"
+                  textSize="xs"
+                  fontWeight="light"
+                />
+                <Link href={`./${blog.slug}`}>
+                  <Paragraph
+                    value={blog.name}
+                    textSize="xl"
+                    fontWeight="bold"
+                  />
+                  <Paragraph
+                    value={blog.c_description}
+                    textSize="sm"
+                    fontWeight="light"
+                  />
+                </Link>
+              </VerticalStack>
+            </HStack>
+          ))}
+        </VerticalStack>
+      </CenteredContainer>
+      <Footer
+        label1="Privacy"
+        link1="#"
+        label2="Terms"
+        link2="#"
+        label3="Settings"
+        link3="#"
+        label4="Help"
+        link4="#"
+        backgroundColor="#000000"
+        textColor="#FFFFFF"
+      />
     </MainLayout>
   );
 }
