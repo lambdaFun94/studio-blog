@@ -10,11 +10,11 @@ export const initialProps: BigImageProps = {
 
 export default function BigImage({ src, alt }: BigImageProps) {
   return (
-    <div className="aspect-video overflow-hidden rounded-md">
+    <div className="aspect-video rounded-md">
       <img
         src={src}
         alt={alt}
-        className="h-full w-full object-cover object-center"
+        className="h-full w-full rounded-md object-cover object-center"
       />
     </div>
   );

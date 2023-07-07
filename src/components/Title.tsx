@@ -1,7 +1,7 @@
 export interface TitleProps {
   value: string;
-  textSize?: "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl";
-  fontWeight?:
+  textSize: "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl";
+  fontWeight:
     | "thin"
     | "extralight"
     | "light"
@@ -21,7 +21,7 @@ export const initialProps: TitleProps = {
 
 const Title = ({ value, textSize, fontWeight }: TitleProps) => {
   return (
-    <div className="mt-4">
+    <div className="not-prose mt-4">
       <h1
         className={`text-${textSize} font-${fontWeight} tracking-tight text-gray-900`}
       >
