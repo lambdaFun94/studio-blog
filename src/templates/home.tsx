@@ -12,15 +12,15 @@ import BigImage from "../components/BigImage";
 import CenteredContainer from "../components/CenteredContainer";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import HStack from "../components/HorizontalStack";
 import SquareImage from "../components/SquareImage";
 import Title from "../components/Title";
 import VerticalStack from "../components/VerticalStack";
 import Date from "../components/Date";
 import { C_featuredBlogs } from "../types/autogen";
-import Snippet from "../components/Snippet";
 import Paragraph from "../components/Paragraph";
 import { Link } from "@yext/pages/components";
+import HorizontalStack from "../components/HorizontalStack";
+import FeaturedBlog from "../components/FeaturedBlog";
 
 export const config: TemplateConfig = {
   stream: {
@@ -50,7 +50,7 @@ export const config: TemplateConfig = {
 };
 
 export const getPath: GetPath<TemplateProps> = () => {
-  return `index.html`;
+  return "index.html";
 };
 
 export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = (
@@ -96,48 +96,8 @@ export default function Home({ document }: TemplateProps) {
             topMargin="0"
             bottomMargin="0"
           />
-          {document.c_featuredBlogs?.map((blog: C_featuredBlogs) => (
-            <HStack
-              spacing="4"
-              leftMargin="0"
-              rightMargin="0"
-              topMargin="0"
-              bottomMargin="0"
-              alignment="top"
-            >
-              <SquareImage
-                src={blog.c_coverPhoto?.image.url}
-                alt={blog.c_coverPhoto?.image.alternateText}
-                size="52"
-              />
-              <VerticalStack
-                spacing="1"
-                topMargin="0"
-                bottomMargin="0"
-                leftMargin="0"
-                rightMargin="0"
-                alignment="left"
-              >
-                <Date
-                  date={blog.datePosted}
-                  textColor="#5b646b"
-                  textSize="xs"
-                  fontWeight="light"
-                />
-                <Link href={`./${blog.slug}`}>
-                  <Paragraph
-                    value={blog.name}
-                    textSize="xl"
-                    fontWeight="bold"
-                  />
-                  <Paragraph
-                    value={blog.c_description}
-                    textSize="sm"
-                    fontWeight="light"
-                  />
-                </Link>
-              </VerticalStack>
-            </HStack>
+          {document.c_featuredBlogs?.map((item: C_featuredBlogs) => (
+            <FeaturedBlog blog={item} />
           ))}
         </VerticalStack>
       </CenteredContainer>
