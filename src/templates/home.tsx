@@ -12,14 +12,9 @@ import BigImage from "../components/BigImage";
 import CenteredContainer from "../components/CenteredContainer";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import SquareImage from "../components/SquareImage";
 import Title from "../components/Title";
 import VerticalStack from "../components/VerticalStack";
-import Date from "../components/Date";
 import { C_featuredBlogs } from "../types/autogen";
-import Paragraph from "../components/Paragraph";
-import { Link } from "@yext/pages/components";
-import HorizontalStack from "../components/HorizontalStack";
 import FeaturedBlog from "../components/FeaturedBlog";
 
 export const config: TemplateConfig = {
