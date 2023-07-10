@@ -92,7 +92,7 @@ export default function Home({ document }: TemplateProps) {
             bottomMargin="0"
           />
           {document.c_featuredBlogs?.map((item: C_featuredBlogs) => (
-            <FeaturedBlog blog={item} />
+            <FeaturedBlog key={item.id} blog={item} />
           ))}
         </VerticalStack>
       </CenteredContainer>
