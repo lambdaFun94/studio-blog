@@ -14,8 +14,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Title from "../components/Title";
 import VerticalStack from "../components/VerticalStack";
-import { C_featuredBlogs } from "../types/autogen";
-import FeaturedBlog from "../components/FeaturedBlog";
+import FeaturedBlogs from "../components/FeaturedBlogs";
 
 export const config: TemplateConfig = {
   stream: {
@@ -91,9 +90,7 @@ export default function Home({ document }: TemplateProps) {
             topMargin="0"
             bottomMargin="0"
           />
-          {document.c_featuredBlogs?.map((item: C_featuredBlogs) => (
-            <FeaturedBlog key={item.id} blog={item} />
-          ))}
+          <FeaturedBlogs blogList={document.c_featuredBlogs} />
         </VerticalStack>
       </CenteredContainer>
       <Footer

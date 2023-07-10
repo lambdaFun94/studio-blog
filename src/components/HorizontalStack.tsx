@@ -6,6 +6,7 @@ export interface HorizontalStackProps {
   topMargin: "0" | "2" | "4" | "6" | "8" | "10";
   bottomMargin: "0" | "2" | "4" | "6" | "8" | "10";
   alignment: "top" | "center" | "bottom";
+  verticalOnMobile: "true" | "false";
 }
 
 const HorizontalStack = ({
@@ -16,6 +17,7 @@ const HorizontalStack = ({
   topMargin,
   bottomMargin,
   alignment,
+  verticalOnMobile,
 }: HorizontalStackProps) => {
   const spacingVariants = {
     "0": "gap-0",
@@ -73,9 +75,14 @@ const HorizontalStack = ({
     bottom: "items-end",
   };
 
+  const responsiveVariants = {
+    true: "flex-col sm:flex-row",
+    false: "",
+  };
+
   return (
     <div
-      className={`flex flex-col sm:flex-row ${alignmentVariants[alignment]} ${spacingVariants[spacing]} ${topMarginVariants[topMargin]} ${bottomMarginVariants[bottomMargin]} ${leftMarginVariants[leftMargin]} ${rightMarginVariants[rightMargin]}`}
+      className={`flex ${responsiveVariants[verticalOnMobile]} ${alignmentVariants[alignment]} ${spacingVariants[spacing]} ${topMarginVariants[topMargin]} ${bottomMarginVariants[bottomMargin]} ${leftMarginVariants[leftMargin]} ${rightMarginVariants[rightMargin]}`}
     >
       {children}
     </div>

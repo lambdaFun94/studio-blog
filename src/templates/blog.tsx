@@ -85,6 +85,7 @@ export default function Blog({ document }: TemplateProps) {
           topMargin="2"
           bottomMargin="0"
           alignment="center"
+          verticalOnMobile="false"
         >
           <Snippet
             text={document.c_blogAuthor}

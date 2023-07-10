@@ -6,7 +6,11 @@ import SquareImage from "./SquareImage";
 import VerticalStack from "./VerticalStack";
 import Date from "./Date";
 
-export interface FeaturedBlogProps {
+export interface FeaturedBlogsProps {
+  blogList: C_featuredBlogs[];
+}
+
+interface FeaturedBlogProps {
   blog: C_featuredBlogs;
 }
 
@@ -19,6 +23,7 @@ const FeaturedBlog = ({ blog }: FeaturedBlogProps) => {
       topMargin="0"
       bottomMargin="0"
       alignment="top"
+      verticalOnMobile="true"
     >
       <Link url={`./${blog.slug}`}>
         <SquareImage
@@ -54,4 +59,14 @@ const FeaturedBlog = ({ blog }: FeaturedBlogProps) => {
   );
 };
 
-export default FeaturedBlog;
+const FeaturedBlogs = ({ blogList }: FeaturedBlogsProps) => {
+  return (
+    <div className="flex flex-col gap-4">
+      {blogList.map((item: C_featuredBlogs) => (
+        <FeaturedBlog key={item.id} blog={item} />
+      ))}
+    </div>
+  );
+};
+
+export default FeaturedBlogs;
