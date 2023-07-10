@@ -6,15 +6,12 @@ import SquareImage from "./SquareImage";
 import VerticalStack from "./VerticalStack";
 import Date from "./Date";
 
-export interface FeaturedBlogsProps {
-  blogList: C_featuredBlogs[];
-}
-
 interface FeaturedBlogProps {
-  blog: C_featuredBlogs;
+  item: C_featuredBlogs;
 }
 
-const FeaturedBlog = ({ blog }: FeaturedBlogProps) => {
+const FeaturedBlog = ({ item }: FeaturedBlogProps) => {
+  console.log(item);
   return (
     <HorizontalStack
       spacing="4"
@@ -25,10 +22,10 @@ const FeaturedBlog = ({ blog }: FeaturedBlogProps) => {
       alignment="top"
       verticalOnMobile="true"
     >
-      <Link url={`./${blog.slug}`}>
+      <Link url={`./${item.slug}`}>
         <SquareImage
-          src={blog.c_coverPhoto?.image.url}
-          alt={blog.c_coverPhoto?.image.alternateText}
+          src={item.c_coverPhoto?.image.url}
+          alt={item.c_coverPhoto?.image.alternateText}
           size="52"
         />
       </Link>
@@ -41,15 +38,15 @@ const FeaturedBlog = ({ blog }: FeaturedBlogProps) => {
         alignment="left"
       >
         <Date
-          date={blog.datePosted}
+          date={item.datePosted}
           textColor="#5b646b"
           textSize="xs"
           fontWeight="light"
         />
-        <Link url={`./${blog.slug}`}>
-          <Paragraph value={blog.name} textSize="xl" fontWeight="bold" />
+        <Link url={`./${item.slug}`}>
+          <Paragraph value={item.name} textSize="xl" fontWeight="bold" />
           <Paragraph
-            value={blog.c_description}
+            value={item.c_description}
             textSize="sm"
             fontWeight="light"
           />
@@ -59,14 +56,4 @@ const FeaturedBlog = ({ blog }: FeaturedBlogProps) => {
   );
 };
 
-const FeaturedBlogs = ({ blogList }: FeaturedBlogsProps) => {
-  return (
-    <div className="flex flex-col gap-4">
-      {blogList.map((item: C_featuredBlogs) => (
-        <FeaturedBlog key={item.id} blog={item} />
-      ))}
-    </div>
-  );
-};
-
-export default FeaturedBlogs;
+export default FeaturedBlog;

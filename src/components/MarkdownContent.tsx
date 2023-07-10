@@ -1,4 +1,3 @@
-import clsx from "clsx";
 import { Markdown } from "@yext/react-components";
 
 interface MarkdownContentProps {

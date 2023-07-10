@@ -1,24 +1,26 @@
-import "../index.css";
 import {
-  GetPath,
-  TemplateProps,
-  TemplateRenderProps,
   GetHeadConfig,
+  GetPath,
   HeadConfig,
   TemplateConfig,
+  TemplateProps,
+  TemplateRenderProps,
 } from "@yext/pages";
-import MainLayout from "../components/MainLayout";
 import BigImage from "../components/BigImage";
 import CenteredContainer from "../components/CenteredContainer";
-import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Header from "../components/Header";
+import MainLayout from "../components/MainLayout";
 import Title from "../components/Title";
 import VerticalStack from "../components/VerticalStack";
-import FeaturedBlogs from "../components/FeaturedBlogs";
+import "../index.css";
+import FeaturedBlog from "../components/FeaturedBlog";
+import { C_featuredBlogs } from "../types/autogen";
 
 export const config: TemplateConfig = {
   stream: {
     $id: "home",
+    localization: { locales: ["en"], primary: false },
     fields: [
       "id",
       "name",
@@ -33,16 +35,9 @@ export const config: TemplateConfig = {
       "c_featuredBlogs.c_description",
       "c_featuredBlogs.datePosted",
     ],
-    filter: {
-      entityTypes: ["ce_homePage"],
-    },
-    localization: {
-      locales: ["en"],
-      primary: false,
-    },
+    filter: { entityTypes: ["ce_homePage"] },
   },
 };
-
 export const getPath: GetPath<TemplateProps> = () => {
   return "index.html";
 };
@@ -90,7 +85,11 @@ export default function Home({ document }: TemplateProps) {
             topMargin="0"
             bottomMargin="0"
           />
-          <FeaturedBlogs blogList={document.c_featuredBlogs} />
+          {document.c_featuredBlogs.map(
+            (item: C_featuredBlogs, index: string) => (
+              <FeaturedBlog item={item} key={index} />
+            )
+          )}
         </VerticalStack>
       </CenteredContainer>
       <Footer
