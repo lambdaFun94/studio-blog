@@ -7,11 +7,22 @@ import VerticalStack from "./VerticalStack";
 import Date from "./Date";
 
 interface FeaturedBlogProps {
-  item: C_featuredBlogs;
+  name?: string;
+  slug?: string;
+  src?: string;
+  alt?: string;
+  c_description?: string;
+  datePosted?: string;
 }
 
-const FeaturedBlog = ({ item }: FeaturedBlogProps) => {
-  console.log(item);
+const FeaturedBlog = ({
+  name,
+  slug,
+  src,
+  alt,
+  c_description,
+  datePosted,
+}: FeaturedBlogProps) => {
   return (
     <HorizontalStack
       spacing="4"
@@ -22,12 +33,8 @@ const FeaturedBlog = ({ item }: FeaturedBlogProps) => {
       alignment="top"
       verticalOnMobile="true"
     >
-      <Link url={`./${item.slug}`}>
-        <SquareImage
-          src={item.c_coverPhoto?.image.url}
-          alt={item.c_coverPhoto?.image.alternateText}
-          size="52"
-        />
+      <Link url={`./${slug}`}>
+        <SquareImage src={src} alt={alt} size="52" />
       </Link>
       <VerticalStack
         spacing="1"
@@ -38,18 +45,14 @@ const FeaturedBlog = ({ item }: FeaturedBlogProps) => {
         alignment="left"
       >
         <Date
-          date={item.datePosted}
+          date={datePosted}
           textColor="#5b646b"
           textSize="xs"
           fontWeight="light"
         />
-        <Link url={`./${item.slug}`}>
-          <Paragraph value={item.name} textSize="xl" fontWeight="bold" />
-          <Paragraph
-            value={item.c_description}
-            textSize="sm"
-            fontWeight="light"
-          />
+        <Link url={`./${slug}`}>
+          <Paragraph value={name} textSize="xl" fontWeight="bold" />
+          <Paragraph value={c_description} textSize="sm" fontWeight="light" />
         </Link>
       </VerticalStack>
     </HorizontalStack>

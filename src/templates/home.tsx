@@ -87,7 +87,15 @@ export default function Home({ document }: TemplateProps) {
           />
           {document.c_featuredBlogs.map(
             (item: C_featuredBlogs, index: string) => (
-              <FeaturedBlog item={item} key={index} />
+              <FeaturedBlog
+                name={item.name}
+                slug={item.slug}
+                src={item.c_coverPhoto?.image.url}
+                alt={item.c_coverPhoto?.image.alternateText}
+                c_description={item.c_description}
+                datePosted={item.datePosted}
+                key={index}
+              />
             )
           )}
         </VerticalStack>
