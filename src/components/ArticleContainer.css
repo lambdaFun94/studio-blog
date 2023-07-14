@@ -5,8 +5,8 @@ h4,
 h5,
 h6,
 p {
-  font-weight: revert;
-  font-size: revert;
-  margin: revert;
-  line-height: 2;
+  font-weight: revert !important;
+  font-size: revert !important;
+  margin: revert !important;
+  line-height: 2 !important;
 }
