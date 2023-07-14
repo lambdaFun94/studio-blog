@@ -6,9 +6,9 @@ interface MarkdownContentProps {
 
 const MarkdownContent = ({ content }: MarkdownContentProps) => {
   return (
-    <div className="prose lg:prose-xl">
+    <article className="prose lg:prose-xl">
       <Markdown content={content} />
-    </div>
+    </article>
   );
 };
 
