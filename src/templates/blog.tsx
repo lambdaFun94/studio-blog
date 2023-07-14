@@ -75,7 +75,7 @@ export default function Blog({ document }: TemplateProps) {
           value={document.name}
           textSize="4xl"
           fontWeight="bold"
-          topMargin="4"
+          topMargin="0"
           bottomMargin="0"
         />
         <HorizontalStack
@@ -83,7 +83,7 @@ export default function Blog({ document }: TemplateProps) {
           leftMargin="0"
           rightMargin="0"
           topMargin="2"
-          bottomMargin="0"
+          bottomMargin="4"
           alignment="center"
           verticalOnMobile="false"
         >

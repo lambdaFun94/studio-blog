@@ -1,4 +1,5 @@
 import { HexColor } from "@yext/studio";
+import classNames from "classnames";
 
 export interface ParagraphProps {
   value?: string;
@@ -14,6 +15,7 @@ export interface ParagraphProps {
     | "extrabold"
     | "black";
   textColor?: HexColor;
+  hiddenOnMobile?: boolean;
 }
 
 export const initialProps: ParagraphProps = {
@@ -21,6 +23,7 @@ export const initialProps: ParagraphProps = {
   textSize: "base",
   fontWeight: "normal",
   textColor: "#000000",
+  hiddenOnMobile: false,
 };
 
 const Paragraph = ({
@@ -28,6 +31,7 @@ const Paragraph = ({
   textSize,
   fontWeight,
   textColor,
+  hiddenOnMobile,
 }: ParagraphProps) => {
   const weightVariants = {
     thin: "font-thin",
@@ -53,7 +57,10 @@ const Paragraph = ({
   return (
     <p
       aria-labelledby="information-heading"
-      className={`${sizeVariants[textSize]} ${weightVariants[fontWeight]}`}
+      className={classNames(
+        `${sizeVariants[textSize]} ${weightVariants[fontWeight]}`,
+        { "hidden md:block": hiddenOnMobile }
+      )}
       style={{ color: textColor }}
     >
       {value}
