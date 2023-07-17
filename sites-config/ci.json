@@ -37,6 +37,7 @@
     "buildCmd": "npm run build:local"
   },
   "livePreview": {
-    "serveSetupCmd": ":"
+    "serveSetupCmd": ":",
+    "serveCmd": "npm run studio"
   }
 }
